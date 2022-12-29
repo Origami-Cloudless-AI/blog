@@ -35,18 +35,32 @@
     "text": "References\n\ndataset, https://www.kaggle.com/ananthr1/room-occupancy-estimation-data-set\nnotebook, https://github.com/doyu/people_count_in_room/blob/main/people_count_in_room.ipynb"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
-  },
-  {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/2022-12-29a-ARIMA_vs_RNN.html",
+    "href": "posts/2022-12-29a-ARIMA_vs_RNN.html",
+    "title": "ARIMA vs RNN in time series",
+    "section": "",
+    "text": "ARIMA is a statistical method for modeling and forecasting time series data. It is based on the assumption that the underlying process generating the data is a stationary process, meaning that the statistical properties of the data do not change over time. ARIMA models are defined by three parameters: the autoregressive (AR) term, the differencing (I) term, and the moving average (MA) term. These parameters determine the behavior of the model and can be estimated from the data using maximum likelihood estimation or another optimization method."
+  },
+  {
+    "objectID": "posts/2022-12-29a-ARIMA_vs_RNN.html#rnn-recurrent-neural-network",
+    "href": "posts/2022-12-29a-ARIMA_vs_RNN.html#rnn-recurrent-neural-network",
+    "title": "ARIMA vs RNN in time series",
+    "section": "RNN (Recurrent Neural Network)",
+    "text": "RNN (Recurrent Neural Network)\nRNN (Recurrent Neural Network) is a type of neural network that is particularly well-suited for modeling time series data. RNNs have a “memory” component, which allows them to incorporate information from previous time steps when making predictions. This makes them well-suited for tasks such as language translation, where understanding the context of a word in a sentence requires considering the words that came before it. RNNs can be trained using a variety of optimization algorithms, such as stochastic gradient descent or Adam."
+  },
+  {
+    "objectID": "posts/2022-12-29a-ARIMA_vs_RNN.html#arima-vs-rnn",
+    "href": "posts/2022-12-29a-ARIMA_vs_RNN.html#arima-vs-rnn",
+    "title": "ARIMA vs RNN in time series",
+    "section": "ARIMA vs RNN",
+    "text": "ARIMA vs RNN\nThere are several key differences between ARIMA and RNN models:\nARIMA models are based on statistical assumptions about the data, whereas RNN models are based on a flexible, non-linear function approximator (the neural network). ARIMA models are generally easier to interpret and understand, since they are based on explicit mathematical equations. RNN models, on the other hand, are more difficult to interpret because they are based on complex neural network architectures. ARIMA models are generally faster to train and predict with, since they are based on simple linear equations. RNN models can be more computationally intensive to train and predict with, especially for large time series datasets. RNN models have the ability to incorporate information from previous time steps, which makes them well-suited for tasks such as language translation. ARIMA models do not have this capability and are limited to modeling the relationships between the current time step and past time steps. In summary, ARIMA and RNN models are both useful tools for modeling and forecasting time series data, but they have different strengths and limitations. ARIMA models are based on statistical assumptions and are generally easier to interpret, but they are limited in their ability to incorporate information from previous time steps. RNN models are based on a flexible function approximator and are able to incorporate information from previous time steps, but they can be more difficult to interpret and are computationally intensive to train and predict with."
   },
   {
     "objectID": "about.html",
@@ -60,6 +74,6 @@
     "href": "index.html",
     "title": "Origami@NEXUS",
     "section": "",
-    "text": "Privacy-preserving occupancy counting with Linear Regression\n\n\n\n\n\n\n\nUseCase\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 29, 2022\n\n\nHiroshi Doyu\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 29, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 26, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Privacy-preserving occupancy counting with Linear Regression\n\n\n\n\n\n\n\nUseCase\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 29, 2022\n\n\nHiroshi Doyu\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nARIMA vs RNN in time series\n\n\n\n\n\n\n\nUseCase\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 29, 2022\n\n\nHiroshi Doyu\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 26, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   }
 ]

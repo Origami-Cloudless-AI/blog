@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harlow Malloc">
+<meta name="author" content="Hiroshi Doyu">
 <meta name="dcterms.date" content="2022-12-29">
 
-<title>Origami@NEXUS - Post With Code</title>
+<title>Origami@NEXUS - ARIMA vs RNN in time series</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,17 +62,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Origami@NEXUS</span>
     </a>
   </div>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../about.html">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -105,9 +105,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Post With Code</h1>
+      <h1 class="title">ARIMA vs RNN in time series</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+                <div class="quarto-category">UseCase</div>
                 <div class="quarto-category">code</div>
                 <div class="quarto-category">analysis</div>
               </div>
@@ -120,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Harlow Malloc </p>
+               <p>Hiroshi Doyu </p>
             </div>
     </div>
       
@@ -138,16 +138,38 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#arima-autoregressive-integrated-moving-average" id="toc-arima-autoregressive-integrated-moving-average" class="nav-link active" data-scroll-target="#arima-autoregressive-integrated-moving-average">ARIMA (Autoregressive Integrated Moving Average)</a></li>
+  <li><a href="#rnn-recurrent-neural-network" id="toc-rnn-recurrent-neural-network" class="nav-link" data-scroll-target="#rnn-recurrent-neural-network">RNN (Recurrent Neural Network)</a></li>
+  <li><a href="#arima-vs-rnn" id="toc-arima-vs-rnn" class="nav-link" data-scroll-target="#arima-vs-rnn">ARIMA vs RNN</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<p>This is a post with executable code.</p>
+<section id="arima-autoregressive-integrated-moving-average" class="level2">
+<h2 class="anchored" data-anchor-id="arima-autoregressive-integrated-moving-average">ARIMA (Autoregressive Integrated Moving Average)</h2>
+<p>ARIMA is a statistical method for modeling and forecasting time series data. It is based on the assumption that the underlying process generating the data is a stationary process, meaning that the statistical properties of the data do not change over time. ARIMA models are defined by three parameters: the autoregressive (AR) term, the differencing (I) term, and the moving average (MA) term. These parameters determine the behavior of the model and can be estimated from the data using maximum likelihood estimation or another optimization method.</p>
+</section>
+<section id="rnn-recurrent-neural-network" class="level2">
+<h2 class="anchored" data-anchor-id="rnn-recurrent-neural-network">RNN (Recurrent Neural Network)</h2>
+<p>RNN (Recurrent Neural Network) is a type of neural network that is particularly well-suited for modeling time series data. RNNs have a “memory” component, which allows them to incorporate information from previous time steps when making predictions. This makes them well-suited for tasks such as language translation, where understanding the context of a word in a sentence requires considering the words that came before it. RNNs can be trained using a variety of optimization algorithms, such as stochastic gradient descent or Adam.</p>
+</section>
+<section id="arima-vs-rnn" class="level2">
+<h2 class="anchored" data-anchor-id="arima-vs-rnn">ARIMA vs RNN</h2>
+<p>There are several key differences between ARIMA and RNN models:</p>
+<p>ARIMA models are based on statistical assumptions about the data, whereas RNN models are based on a flexible, non-linear function approximator (the neural network). ARIMA models are generally easier to interpret and understand, since they are based on explicit mathematical equations. RNN models, on the other hand, are more difficult to interpret because they are based on complex neural network architectures. ARIMA models are generally faster to train and predict with, since they are based on simple linear equations. RNN models can be more computationally intensive to train and predict with, especially for large time series datasets. RNN models have the ability to incorporate information from previous time steps, which makes them well-suited for tasks such as language translation. ARIMA models do not have this capability and are limited to modeling the relationships between the current time step and past time steps. In summary, ARIMA and RNN models are both useful tools for modeling and forecasting time series data, but they have different strengths and limitations. ARIMA models are based on statistical assumptions and are generally easier to interpret, but they are limited in their ability to incorporate information from previous time steps. RNN models are based on a flexible function approximator and are able to incorporate information from previous time steps, but they can be more difficult to interpret and are computationally intensive to train and predict with.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,6 +1,6 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
+title: "Welcome To Origami@NEXUS"
+author: "Hiroshi Doyu"
 date: "2022-12-26"
 categories: [news]
 ---
