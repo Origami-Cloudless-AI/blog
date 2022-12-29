@@ -37,7 +37,7 @@
   {
     "objectID": "posts/welcome/index.html",
     "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "title": "Welcome To Origami@NEXUS",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
@@ -74,6 +74,6 @@
     "href": "index.html",
     "title": "Origami@NEXUS",
     "section": "",
-    "text": "Privacy-preserving occupancy counting with Linear Regression\n\n\n\n\n\n\n\nUseCase\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 29, 2022\n\n\nHiroshi Doyu\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nARIMA vs RNN in time series\n\n\n\n\n\n\n\nUseCase\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 29, 2022\n\n\nHiroshi Doyu\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 26, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Privacy-preserving occupancy counting with Linear Regression\n\n\n\n\n\n\n\nUseCase\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 29, 2022\n\n\nHiroshi Doyu\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nARIMA vs RNN in time series\n\n\n\n\n\n\n\nUseCase\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 29, 2022\n\n\nHiroshi Doyu\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To Origami@NEXUS\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 26, 2022\n\n\nHiroshi Doyu\n\n\n\n\n\n\nNo matching items"
   }
 ]
