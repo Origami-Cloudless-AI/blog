@@ -1,0 +1,188 @@
+---
+title: "Origami"
+author: "Bringing AI to the very end of IoT Edge"
+theme: "metropolis"
+fonttheme: "default"
+fontsize: 11pt
+urlcolor: red
+linkstyle: bold
+aspectratio: 169
+date: \today
+section-titles: false
+toc: false
+---
+# Problem: No Cloud, No AI
+::: columns
+:::: column
+## How AI works now:
+
+1. IoT device sends data to Cloud DC
+2. Data is processed by Cloud AI
+3. Prediction is sent back to IoT device
+4. IoT device actuates control
+
+**Cloud AI** depends on network connection,
+
+- Too **far** away to respond quickly
+- Too **big** to run locally
+- Too **expensive** unnecessarily
+
+::::
+:::: column
+![Big AI on Cloud](images/cloudml.png){width=100%}
+::::
+:::
+
+
+# Solution: Cloudless AI with tiny Machine Learning
+We _squeeze_ ML smaller,
+_run_ on microcontroller in IoT device,
+where sensor data is _processed_ locally.
+This is called,
+
+::: columns
+:::: {.column width=60%}
+
+##
+## Tiny Machine Learning
+##
+
+1. Cloudless & Networkless
+2. Small, fast & energy efficient
+3. Cost effective
+
+::::
+
+:::: {.column width=40%}
+##
+##
+
+![](images/tinyml.png)
+::::
+:::
+
+
+
+# Market opportunity: _tiny AI Is Eating IoT_
+- 2011, [Why Software Is Eating the World](https://a16z.com/2011/08/20/why-software-is-eating-the-world/), a16z
+- 2017, [The End of Cloud Computing](https://a16z.com/2019/11/15/the-end-of-cloud-computing-2/), a16z
+- 2019, [Software Ate The World, Now AI Is Eating Software](https://www.forbes.com/sites/cognitiveworld/2019/08/29/software-ate-the-world-now-ai-is-eating-software/), Forbes
+- 2022, [AI Accelerators Enter IoT SoCs](https://www.eetimes.com/ai-accelerators-enter-iot-socs/), EETIMES
+- 2023, [AI Ate Software, Now tiny AI Is Eating IoT](https://origami-tinyml.github.io/blog/posts/Origami_pitchdeck.pdf), Origami
+
+::: columns
+:::: column
+![Enterprise IoT market](images/Enterprise-IoT-market-2019–2027-min.png){width=100%}
+::::
+:::: column
+![Deep learning chipset revenue](images/edgeaichipset.png){height=70%}
+::::
+:::
+
+
+# Product: TinyML as-a-Service (TinyMLaaS) {#TinyMLaaS}
+
+
+![](images/TinyMLaaS_one_pager.png){height=95%}
+
+
+# Business model
+
+## Subscription
+
+**Type** | **Price / Month**
+:--------|:-------------------
+Free | $0 < 30H
+SME | $10K > 30H, inc 3 accounts
+Enterprise | Contact sales
+
+## Consulting
+
+**Type**             | **Description**           | **Price**
+:--------------------|:--------------------------|:----------------
+Prof Srvc            | Time & Materials          | $150 / H
+License              | Per ML model              | $10K / model / year
+
+
+
+# Marketing and sales strategy
+Basically TinyML could be applied to any industries. **Now We focus on:**
+
+::: columns
+:::: {.column width=50%}
+## Factory Automation
+![](images/neles-valve-controllers2.jpg){height=30%}
+
+- Networkless AI Automation
+- Cloudless Predictive maintenance
+  - without big data storage
+- Autonomous Emergency shutdown
+
+::::
+:::: column
+## HealthCare
+![](images/wearable_technology_healthcare_blog_mobisoft_infotech.png){height=30%}
+
+- Cloudless Medical Gadget
+  - with longer battery life
+  - with privacy preservation
+  - with small AI models
+
+::::
+:::
+
+
+# Team^[In detail, [https://www.mindmeister.com/map/2547854225](https://www.mindmeister.com/map/2547854225)] {#Team}
+
+![](images/team.png){height=93%}
+
+
+
+# History, Progress & Plan
+- 09/2022 Origami started under NEXUS incubation program^[[20 promising teams selected for mentor-driven NEXUS incubator programme](https://www.helsinki.fi/en/networks/helsinki-incubator-programmes/news/20-promising-teams-selected-mentor-driven-nexus-incubator-programme)]
+- 12/2022 On-site workshop held on customer premises
+- 01/2023 A workshop report & piloting proposals sent
+- 02/2023 Started co-development with University of Hesinki CS
+- 03/2023 Agree on piloting project with _Letter of Intent_ (LoI)
+- 04/2023 Acquire funding with LoI
+- 05/2023 Hire more developers
+- 06/2023 Close a piloting contract
+- 07/2023 Start piloting development
+- 10/2023 Release 1st piloting product
+- 12/2023 Start [TinyMLaaS](#TinyMLaaS) subscription service
+
+
+# Ask for $500,000
+Finiush alpha, Release beta & Hire key staff
+
+::: columns
+:::: {.column width=30%}
+## Product Dev
+$100,000
+
+- Frontend dev (contract)
+- UI designer (contract)
+
+::::
+:::: {.column width=30%}
+## New Hires
+$300,000
+
+- Busidev mgr
+- Frontend dev
+- Backend dev
+- Office mgr
+
+::::
+:::: {.column width=40%}
+## Office & Other
+$100,000
+
+- Hardware equippments for dev
+- Monthly payments for Cloud
+::::
+:::
+
+# Contact information
+## [Origami](#Team)
+[https://Origami-TinyML.github.io/blog/about.html](https://Origami-TinyML.github.io/blog/about.html)
